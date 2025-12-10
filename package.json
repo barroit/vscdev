@@ -1,0 +1,31 @@
+{
+   "name": "vscdev",
+   "displayName": "VSCDev",
+   "description": "Helpers for developing vscode extensions",
+   "icon": "image/negi.png",
+   "type": "module",
+   "version": "0.0.1",
+   "publisher": "barroit",
+   "license": "GPL-3.0-or-later",
+   "main": "build/entry.js",
+   "engines": {
+      "vscode": "^1.74.0"
+   },
+   "categories": [
+      "Other"
+   ],
+   "repository": {
+      "type": "git",
+      "url": "git+ssh://git@github.com:barroit/vscdev.git"
+   },
+   "contributes": {
+      "commands": [
+         {
+            "command": "vscdev.reload",
+            "title": "reload extension",
+            "category": "vscdev",
+            "enablement": "workbenchState != empty"
+         }
+      ]
+   }
+}
