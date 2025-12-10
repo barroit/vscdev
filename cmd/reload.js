@@ -3,7 +3,13 @@
  * Copyright 2025 Jiamu Sun <barroit@linux.com>
  */
 
-export function exec()
+import { commands } from 'vscode'
+
+const { executeCommand: exec_cmd } = commands
+
+export async function exec()
 {
-	console.log(111)
+	await exec_cmd('vscdev.make')
+
+	exec_cmd('workbench.action.reloadWindow')
 }

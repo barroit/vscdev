@@ -8,6 +8,7 @@ import { commands } from 'vscode'
 const { registerCommand: cmd } = commands
 
 const cmds = {
+	'make':   import('./cmd/make.js'),
 	'reload': import('./cmd/reload.js'),
 }
 
