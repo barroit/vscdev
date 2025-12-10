@@ -1,0 +1,5 @@
+vscdev
+======
+
+This repo tracks vscdev. It's a vscode extension, which defines command palette
+helpers used in general purpose extension development.
