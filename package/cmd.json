@@ -1,0 +1,12 @@
+{
+   "command": "vscdev.make",
+   "title": "make extension",
+   "category": "vscdev",
+   "enablement": "workbenchState != empty"
+},
+{
+   "command": "vscdev.reload",
+   "title": "reload extension",
+   "category": "vscdev",
+   "enablement": "workbenchState != empty"
+}

@@ -5,7 +5,10 @@
 
 import { commands } from 'vscode'
 
-const { registerCommand: cmd } = commands
+const {
+	registerCommand: cmd,
+	registerTextEditorCommand: editor_cmd
+} = commands
 
 const cmds = {
 	'make':   import('./cmd/make.js'),
@@ -16,7 +19,7 @@ export async function activate(ctx)
 {
 	for (const id of Object.keys(cmds)) {
 		const module = await cmds[id]
-		const exec = cmd(`vscdev.${id}`, module.exec, { ctx })
+		const exec = cmd(`vscdev.${id}`, module.exec)
 
 		ctx.subscriptions.push(exec)
 	}
