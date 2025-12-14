@@ -1,12 +1,18 @@
 {
    "command": "vscdev.make",
-   "title": "make extension",
+   "title": "build and install binary",
    "category": "vscdev",
    "enablement": "workbenchState != empty"
 },
 {
-   "command": "vscdev.reload",
-   "title": "reload extension",
+   "command": "vscdev.reload-window",
+   "title": "reload window with new binary",
+   "category": "vscdev",
+   "enablement": "workbenchState != empty"
+},
+{
+   "command": "vscdev.reload-debugger",
+   "title": "reload debugger with new binary",
    "category": "vscdev",
    "enablement": "workbenchState != empty"
 }

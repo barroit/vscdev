@@ -11,8 +11,9 @@ const {
 } = commands
 
 const cmds = {
-	'make':   import('./cmd/make.js'),
-	'reload': import('./cmd/reload.js'),
+	'make':            import('./cmd/make.js'),
+	'reload-window':   import('./cmd/reload_window.js'),
+	'reload-debugger': import('./cmd/reload_debugger.js'),
 }
 
 export async function activate(ctx)
