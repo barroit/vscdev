@@ -1,3 +1,4 @@
+dnl SPDX-License-Identifier: GPL-3.0-or-later
 {
    "command": "vscdev.make",
    "title": "build and install binary",
