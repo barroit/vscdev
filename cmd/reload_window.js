@@ -3,9 +3,7 @@
  * Copyright 2025 Jiamu Sun <barroit@linux.com>
  */
 
-import { commands } from 'vscode'
-
-const { executeCommand: vsc_exec_cmd } = commands
+import { vsc_exec_cmd } from '../helper/vsc.js'
 
 export async function exec()
 {

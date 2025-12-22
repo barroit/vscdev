@@ -3,9 +3,7 @@
  * Copyright 2025 Jiamu Sun <barroit@linux.com>
  */
 
-import { commands } from 'vscode'
-
-const { registerCommand: vsc_cmd } = commands
+import { vsc_add_cmd } from './helper/vsc.js'
 
 const cmds = {
 	'make':            import('./cmd/make.js'),
@@ -17,7 +15,7 @@ export async function activate(ctx)
 {
 	for (const id of Object.keys(cmds)) {
 		const module = await cmds[id]
-		const exec = vsc_cmd(`vscdev.${id}`, module.exec)
+		const exec = vsc_add_cmd(`vscdev.${id}`, module.exec)
 
 		ctx.subscriptions.push(exec)
 	}
