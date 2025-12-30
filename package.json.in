@@ -2,9 +2,6 @@ dnl SPDX-License-Identifier: GPL-3.0-or-later
 dnl
 {
    "name": "vscdev",
-   "displayName": "VSCDev",
-   "description": "Helpers for developing vscode extensions",
-   "icon": "image/negi.png",
    "type": "module",
    "version": "0.0.1",
    "publisher": "barroit",
@@ -13,16 +10,19 @@ dnl
    "engines": {
       "vscode": "^1.74.0"
    },
+   "contributes": {
+      "commands": [
+include([[package/cmd.json]])dnl
+      ]
+   },
+   "displayName": "VSCDev",
+   "description": "Helpers for developing vscode extensions",
+   "icon": "image/negi.png",
    "categories": [
       "Other"
    ],
    "repository": {
       "type": "git",
       "url": "git+ssh://git@github.com:barroit/vscdev.git"
-   },
-   "contributes": {
-      "commands": [
-include(`package/cmd.json')dnl
-      ]
    }
 }
